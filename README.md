@@ -3,7 +3,6 @@
 The official website of the **Berea Economics & Data Science Association (BEDSA)** at Berea College.  
 BEDSA is a student-led organization that explores the connection between economics and data science through workshops, events, and community projects.  
 
-🌐 **Live site:** _(add GitHub Pages or Netlify link here once deployed)_  
 
 ---
 
