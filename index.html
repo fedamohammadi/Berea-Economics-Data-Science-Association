@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>BEDSA - Berea Economics & Data Science Association</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Feather Icons for Menu Icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <style>
+        /* Custom base styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb; /* A slightly off-white for a softer look */
+        }
+        /* Custom class for smooth transitions */
+        .page-section {
+            display: none; /* Hidden by default */
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .page-section.active {
+            display: block; /* Shown when active */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .nav-link.active {
+            font-weight: 600;
+            color: #223f5e;
+            border-bottom: 2px solid #223f5e;
+        }
+    </style>
+
+    <script>
+        // Custom Tailwind theme configuration
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bedsa-blue': '#223f5e',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-2 flex justify-between items-center">
+            <!-- Logo on the Left -->
+            <div>
+                <a href="#" class="nav-link" data-page="home">
+                    <!-- Increased logo size -->
+                    <img src="bedsa logo.jpg" alt="BEDSA Logo" class="max-h-32 w-auto object-contain" onerror="this.onerror=null;this.src='https://placehold.co/300x120/223f5e/FFFFFF?text=BEDSA&font=inter';">
+                </a>
+            </div>
+
+            <!-- Desktop Navigation on the Right -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#" class="nav-link text-gray-600 hover:text-bedsa-blue transition duration-300 pb-1" data-page="home">Home</a>
+                <a href="#" class="nav-link text-gray-600 hover:text-bedsa-blue transition duration-300 pb-1" data-page="about">About</a>
+                <a href="#" class="nav-link text-gray-600 hover:text-bedsa-blue transition duration-300 pb-1" data-page="events">Events</a>
+                <a href="#" class="nav-link text-gray-600 hover:text-bedsa-blue transition duration-300 pb-1" data-page="gallery">Gallery</a>
+                <a href="#" class="nav-link text-gray-600 hover:text-bedsa-blue transition duration-300 pb-1" data-page="contact">Join Us</a>
+            </div>
+            
+            <!-- Mobile Menu Button on the Right -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-bedsa-blue">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+            <a href="#" class="nav-link block text-gray-600 hover:text-bedsa-blue transition duration-300 py-2" data-page="home">Home</a>
+            <a href="#" class="nav-link block text-gray-600 hover:text-bedsa-blue transition duration-300 py-2" data-page="about">About</a>
+            <a href="#" class="nav-link block text-gray-600 hover:text-bedsa-blue transition duration-300 py-2" data-page="events">Events</a>
+            <a href="#" class="nav-link block text-gray-600 hover:text-bedsa-blue transition duration-300 py-2" data-page="gallery">Gallery</a>
+            <a href="#" class="nav-link block text-gray-600 hover:text-bedsa-blue transition duration-300 py-2" data-page="contact">Join Us</a>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container mx-auto p-6 md:p-12">
+
+        <!-- Home Section -->
+        <section id="page-home" class="page-section space-y-12">
+            <!-- Hero Section -->
+            <div class="text-center bg-white p-8 md:p-12 rounded-lg shadow-lg">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-bedsa-blue mb-4">Berea Economics & Data Science Association</h1>
+                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8">Your hub for exploring the powerful intersection of economic theory and data-driven analysis at Berea College.</p>
+                <button class="nav-button bg-bedsa-blue text-white font-bold py-3 px-8 rounded-lg hover:bg-opacity-90 transition duration-300 shadow-md" data-page="about">Learn More About BEDSA</button>
+            </div>
+
+            <!-- What We Do Section -->
+            <div class="bg-white p-8 md:p-12 rounded-lg shadow-lg">
+                <h2 class="text-3xl font-bold text-bedsa-blue mb-8 text-center">What We Do</h2>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <!-- Feature 1: Workshops -->
+                    <div class="flex flex-col items-center">
+                        <div class="bg-bedsa-blue text-white rounded-full p-4 mb-4">
+                            <i data-feather="tool" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Hands-On Workshops</h3>
+                        <p class="text-gray-600">Gain practical skills in data analysis tools like R, Python, and SQL, and learn how to apply them to economic problems.</p>
+                    </div>
+                    <!-- Feature 2: Guest Talks -->
+                    <div class="flex flex-col items-center">
+                        <div class="bg-bedsa-blue text-white rounded-full p-4 mb-4">
+                            <i data-feather="mic" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Industry Professionals</h3>
+                        <p class="text-gray-600">Connect with and learn from experts in economics, data science, and public policy through engaging guest lectures.</p>
+                    </div>
+                    <!-- Feature 3: Projects -->
+                    <div class="flex flex-col items-center">
+                        <div class="bg-bedsa-blue text-white rounded-full p-4 mb-4">
+                            <i data-feather="users" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Collaborative Projects</h3>
+                        <p class="text-gray-600">Work in teams on real-world data projects that make an impact and build a portfolio of your analytical work.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Social Media Section -->
+            <div class="bg-white p-8 md:p-12 rounded-lg shadow-lg">
+                <h2 class="text-3xl font-bold text-bedsa-blue mb-8 text-center">Connect With Us</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8 text-center">Follow our journey, get updates on events, and join the conversation on our social media channels.</p>
+                <div class="flex justify-center space-x-6">
+                    <a href="#" target="_blank" class="text-gray-500 hover:text-bedsa-blue transition duration-300">
+                        <i data-feather="linkedin" class="w-10 h-10"></i>
+                        <span class="sr-only">LinkedIn</span>
+                    </a>
+                    <a href="#" target="_blank" class="text-gray-500 hover:text-bedsa-blue transition duration-300">
+                        <i data-feather="instagram" class="w-10 h-10"></i>
+                        <span class="sr-only">Instagram</span>
+                    </a>
+                </div>
+                <p class="mt-6 text-sm text-gray-500 text-center">(Links coming soon!)</p>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="page-about" class="page-section">
+             <div class="bg-white p-8 md:p-12 rounded-lg shadow-lg space-y-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-bedsa-blue mb-8 text-center">Our Mission</h2>
+                    <div class="space-y-6 text-gray-700 leading-relaxed">
+                        <p>The <span class="font-semibold text-bedsa-blue">Berea Economics & Data Science Association (BEDSA)</span> is a student-led organization at Berea College that explores the powerful connection between economics and data. We provide a community where students can learn, collaborate, and apply data-driven approaches to real-world issues in economics, policy, and society.</p>
+                        <p>Through workshops, guest talks, events, and collaborative projects, BEDSA helps members strengthen their academic and professional skills while building meaningful connections with peers, faculty, and industry professionals.</p>
+                        <p>Whether you are pursuing a career in economics, data science, or simply curious about how data shapes our world, BEDSA is a place to grow, share ideas, and make an impact.</p>
+                    </div>
+                </div>
+
+                <!-- Meet the Team Section -->
+                <div>
+                    <h2 class="text-3xl font-bold text-bedsa-blue mb-8 text-center">Meet Our Team</h2>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+                        <!-- Team Member: Feda Mohammadi -->
+                        <div class="text-center">
+                            <img class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-lg" src="feda.jpg" alt="Photo of Feda Mohammadi" onerror="this.onerror=null;this.src='https://placehold.co/400x400/223f5e/FFFFFF?text=FM&font=inter';">
+                            <h3 class="text-xl font-bold text-gray-800">Feda Mohammadi</h3>
+                            <p class="text-bedsa-blue font-semibold">President</p>
+                            <p class="text-gray-600">Economics & Computer Science (Junior)</p>
+                        </div>
+
+                        <!-- Team Member: Aziza Altyyeva -->
+                        <div class="text-center">
+                            <img class="w-40 h-40 rounded-full mx-auto mb-4 object-cover bg-gray-200 shadow-lg" src="https://placehold.co/400x400/223f5e/FFFFFF?text=AA&font=inter" alt="Placeholder for Aziza Altyyeva">
+                            <h3 class="text-xl font-bold text-gray-800">Aziza Altyyeva</h3>
+                            <p class="text-bedsa-blue font-semibold">Vice President</p>
+                            <p class="text-gray-600">Mathematics, CS & Econ Minor (Junior)</p>
+                        </div>
+                        
+                        <!-- Team Member: Samundra Adhikari -->
+                        <div class="text-center">
+                            <img class="w-40 h-40 rounded-full mx-auto mb-4 object-cover bg-gray-200 shadow-lg" src="https://placehold.co/400x400/223f5e/FFFFFF?text=SA&font=inter" alt="Placeholder for Samundra Adhikari">
+                            <h3 class="text-xl font-bold text-gray-800">Samundra Adhikari</h3>
+                            <p class="text-bedsa-blue font-semibold">Treasurer</p>
+                            <p class="text-gray-600">Economics (Junior)</p>
+                        </div>
+
+                        <!-- Placeholder: Event Chair -->
+                         <div class="text-center">
+                            <div class="w-40 h-40 rounded-full mx-auto mb-4 bg-gray-200 shadow-lg flex items-center justify-center">
+                                <i data-feather="calendar" class="w-16 h-16 text-gray-400"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">To Be Announced</h3>
+                            <p class="text-bedsa-blue font-semibold">Event Chair</p>
+                            <p class="text-gray-600">Position Open</p>
+                        </div>
+
+                        <!-- Placeholder: Social Media Coordinator -->
+                         <div class="text-center">
+                            <div class="w-40 h-40 rounded-full mx-auto mb-4 bg-gray-200 shadow-lg flex items-center justify-center">
+                               <i data-feather="share-2" class="w-16 h-16 text-gray-400"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">To Be Announced</h3>
+                            <p class="text-bedsa-blue font-semibold">Social Media Coordinator</p>
+                            <p class="text-gray-600">Position Open</p>
+                        </div>
+
+                        <!-- Placeholder: Outreach Officer -->
+                         <div class="text-center">
+                            <div class="w-40 h-40 rounded-full mx-auto mb-4 bg-gray-200 shadow-lg flex items-center justify-center">
+                                <i data-feather="globe" class="w-16 h-16 text-gray-400"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">To Be Announced</h3>
+                            <p class="text-bedsa-blue font-semibold">Outreach/PR Officer</p>
+                            <p class="text-gray-600">Position Open</p>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </section>
+
+        <!-- Events Section -->
+        <section id="page-events" class="page-section space-y-12">
+            <!-- Upcoming Events -->
+            <div class="bg-white p-8 md:p-12 rounded-lg shadow-lg">
+                <h2 class="text-3xl font-bold text-bedsa-blue mb-8 text-center">Upcoming Events</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Event Card 1 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                        <div class="bg-gray-200 h-40 flex items-center justify-center">
+                           <i data-feather="bar-chart-2" class="w-12 h-12 text-gray-400"></i>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <p class="text-sm text-bedsa-blue font-semibold mb-1">SEP 25, 2025 | 6:00 PM</p>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2 flex-grow">Workshop: Introduction to R for Data Analysis</h3>
+                            <p class="text-gray-600">Join us for a beginner-friendly workshop on the R programming language. No prior experience needed!</p>
+                        </div>
+                    </div>
+                    <!-- Event Card 2 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                        <div class="bg-gray-200 h-40 flex items-center justify-center">
+                            <i data-feather="cloud-lightning" class="w-12 h-12 text-gray-400"></i>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <p class="text-sm text-bedsa-blue font-semibold mb-1">OCT 12, 2025 | 7:00 PM</p>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2 flex-grow">Guest Speaker: The Economics of Climate Change</h3>
+                            <p class="text-gray-600">A talk by Dr. Eleanor Vance on using data models to understand the economic impact of environmental policy.</p>
+                        </div>
+                    </div>
+                    <!-- Event Card 3 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                        <div class="bg-gray-200 h-40 flex items-center justify-center">
+                             <i data-feather="briefcase" class="w-12 h-12 text-gray-400"></i>
+                        </div>
+                         <div class="p-6 flex flex-col flex-grow">
+                            <p class="text-sm text-bedsa-blue font-semibold mb-1">NOV 08, 2025 | 5:30 PM</p>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2 flex-grow">Project Showcase & Networking Night</h3>
+                            <p class="text-gray-600">See what our members have been working on and connect with faculty and local professionals.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Past Events -->
+             <div class="bg-white p-8 md:p-12 rounded-lg shadow-lg">
+                <h2 class="text-3xl font-bold text-bedsa-blue mb-8 text-center">Past Events</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Past Event Card 1 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                        <div class="bg-gray-200 h-40 flex items-center justify-center">
+                           <i data-feather="clipboard" class="w-12 h-12 text-gray-400"></i>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <p class="text-sm text-bedsa-blue font-semibold mb-1">APR 18, 2025 | 6:00 PM</p>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2 flex-grow">SQL for Beginners Workshop</h3>
+                            <p class="text-gray-600">A hands-on session covering the basics of SQL for data querying and management.</p>
+                        </div>
+                    </div>
+                    <!-- Past Event Card 2 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                        <div class="bg-gray-200 h-40 flex items-center justify-center">
+                            <i data-feather="dollar-sign" class="w-12 h-12 text-gray-400"></i>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <p class="text-sm text-bedsa-blue font-semibold mb-1">MAR 22, 2025 | 7:00 PM</p>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2 flex-grow">Alumni Panel: Careers in Data Science</h3>
+                            <p class="text-gray-600">Berea alumni shared their experiences and advice for breaking into the data science industry.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="page-gallery" class="page-section">
+            <div class="bg-white p-8 md:p-12 rounded-lg shadow-lg">
+                <h2 class="text-3xl font-bold text-bedsa-blue mb-8 text-center">Gallery</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8 text-center">A glimpse into our workshops, events, and community moments. More photos coming soon!</p>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <!-- Placeholder Images -->
+                    <div class="aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg flex items-center justify-center">
+                        <i data-feather="camera" class="w-12 h-12 text-gray-400"></i>
+                    </div>
+                    <div class="aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg flex items-center justify-center">
+                        <i data-feather="camera" class="w-12 h-12 text-gray-400"></i>
+                    </div>
+                    <div class="aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg flex items-center justify-center">
+                        <i data-feather="camera" class="w-12 h-12 text-gray-400"></i>
+                    </div>
+                    <div class="aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg flex items-center justify-center">
+                        <i data-feather="camera" class="w-12 h-12 text-gray-400"></i>
+                    </div>
+                     <div class="aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg flex items-center justify-center">
+                        <i data-feather="camera" class="w-12 h-12 text-gray-400"></i>
+                    </div>
+                    <div class="aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg flex items-center justify-center">
+                        <i data-feather="camera" class="w-12 h-12 text-gray-400"></i>
+                    </div>
+                    <div class="aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg flex items-center justify-center">
+                        <i data-feather="camera" class="w-12 h-12 text-gray-400"></i>
+                    </div>
+                     <div class="aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg flex items-center justify-center">
+                        <i data-feather="camera" class="w-12 h-12 text-gray-400"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="page-contact" class="page-section">
+            <div class="bg-white p-8 md:p-12 rounded-lg shadow-lg">
+                <h2 class="text-3xl font-bold text-bedsa-blue mb-8 text-center">Get Involved!</h2>
+                <div class="text-center">
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">We're always looking for new members who are passionate about economics and data. Reach out to learn more about how you can join BEDSA.</p>
+                    <div class="space-y-4">
+                        <p class="text-gray-700">
+                            <span class="font-semibold">Meetings:</span> Bi-weekly on Thursdays at 5:00 PM in the Draper Building, Room 114.
+                        </p>
+                        <p class="text-gray-700">
+                            <span class="font-semibold">Email:</span> <a href="mailto:bedsa@berea.edu" class="text-bedsa-blue hover:underline">bedsa@berea.edu</a>
+                        </p>
+                         <p class="text-gray-700">
+                            <span class="font-semibold">Faculty Advisor:</span> Dr. Volker Grzimek (Economics and Business Department)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white mt-12 border-t">
+        <div class="container mx-auto px-6 py-4 text-center text-gray-500">
+            <p>&copy; 2025 Berea Economics & Data Science Association. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for page navigation and mobile menu
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const navButtons = document.querySelectorAll('.nav-button');
+            const pageSections = document.querySelectorAll('.page-section');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            function showPage(pageId) {
+                // Hide all sections
+                pageSections.forEach(section => {
+                    section.classList.remove('active');
+                });
+
+                // Show the target section
+                const targetPage = document.getElementById(`page-${pageId}`);
+                if (targetPage) {
+                    targetPage.classList.add('active');
+                }
+                
+                // Update active link style
+                navLinks.forEach(link => {
+                    if (link.dataset.page === pageId) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+
+                // Close mobile menu after navigation
+                mobileMenu.classList.add('hidden');
+                window.scrollTo(0, 0); // Scroll to top on page change
+            }
+
+            // Set default page
+            showPage('home');
+
+            // Add click listeners to all navigation links
+            const allNavTriggers = [...navLinks, ...navButtons];
+            allNavTriggers.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const pageId = this.dataset.page;
+                    showPage(pageId);
+                });
+            });
+
+            // Mobile menu toggle
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Feather Icons replacement
+            feather.replace();
+        });
+    </script>
+</body>
+</html>
+
+
+
+
