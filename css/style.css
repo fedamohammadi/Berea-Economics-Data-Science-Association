@@ -4,37 +4,163 @@ body {
     background-color: #f9fafb;
 }
 
-/* Main content area animation */
-main {
+/* Custom class for smooth transitions */
+.page-section {
+    display: none; /* Hidden by default */
     animation: fadeIn 0.5s ease-in-out;
 }
-
+.page-section.active {
+    display: block; /* Shown when active */
+}
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Style for the active navigation link */
 .nav-link.active {
     font-weight: 600;
     color: #223f5e;
     border-bottom: 2px solid #223f5e;
 }
 
-/* Custom styles for article content */
+/* Base prose styles for articles */
 .prose h3 {
-    font-size: 1.25rem;
+    font-size: 1.5rem; /* 24px */
     font-weight: 700;
     color: #223f5e;
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    scroll-margin-top: 8rem; /* Offset for sticky header */
 }
-
 .prose ul {
     list-style-type: disc;
     padding-left: 1.5rem;
 }
-
 .prose li {
+    margin-bottom: 0.75rem;
+}
+.prose strong {
+    color: #111827; /* A darker gray for emphasis */
+}
+
+/* New Article Layout Styles */
+.article-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media (min-width: 1024px) { /* Apply on large screens */
+    .article-layout {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+/* Table of Contents Sidebar */
+.toc-sidebar {
+    background-color: #223f5e;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    order: -1; /* Move to top on mobile */
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 1024px) {
+    .toc-sidebar {
+        width: 250px;
+        position: sticky;
+        top: 120px; /* Adjust based on your sticky header height */
+        flex-shrink: 0;
+        order: 0; /* Reset order on desktop */
+        margin-bottom: 0;
+    }
+}
+
+.toc-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.toc-sidebar a {
+    color: #e5e7eb;
+    transition: color 0.2s;
+    display: block;
+    padding: 0.5rem 0;
+}
+
+.toc-sidebar a:hover,
+.toc-sidebar a.active {
+    color: white;
+    font-weight: 600;
+}
+
+
+/* Article Body */
+.article-body {
+    flex-grow: 1;
+    min-width: 0; /* Prevents flexbox overflow */
+    background-color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+/* Styles for Key Takeaways, References, and Author Info */
+.key-takeaways-title,
+.references-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #223f5e;
+    margin-top: 2.5em;
+    margin-bottom: 1.5em;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 1.5em;
+}
+
+.key-takeaways-list,
+.references-list {
+    list-style: none;
+    padding-left: 0;
+}
+.key-takeaways-list li {
+    padding-left: 1.75em;
+    position: relative;
+    margin-bottom: 0.75rem;
+}
+.key-takeaways-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 1px;
+    color: #16a34a; /* Green checkmark */
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.references-list li {
+    font-size: 0.9rem;
+    color: #4b5563;
+    padding-left: 1.5em;
+    text-indent: -1.5em;
     margin-bottom: 0.5rem;
 }
+
+.author-info {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e5e7eb;
+}
+.author-info h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #223f5e;
+    margin-bottom: 0.75rem;
+}
+.author-info p {
+    margin: 0.25rem 0;
+    color: #374151;
+}
+

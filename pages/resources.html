@@ -1,149 +1,510 @@
-<div>
-    <!-- This container shows the list of articles -->
-    <div id="resources-list">
-        <div class="bg-white p-8 md:p-12 rounded-lg shadow-lg">
-            <h2 class="text-3xl font-bold text-bedsa-blue mb-8 text-center">Student Resources</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Article Card 1 -->
-                <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col">
-                    <div class="bg-bedsa-blue h-40 flex items-center justify-center"><i data-feather="briefcase" class="w-16 h-16 text-white"></i></div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-xl font-bold text-gray-800 mb-3 flex-grow">Landing Your First Job in Econ & Data Science</h3>
-                        <div class="text-sm text-gray-500">By Feda Mohammadi | Sep 1, 2025</div>
-                        <button data-article-id="1" class="read-more-button mt-4 text-bedsa-blue font-semibold hover:underline self-start">Read More &rarr;</button>
-                    </div>
+<!-- This container shows the list of articles -->
+<div id="resources-list">
+    <div class="bg-white p-8 md:p-12 rounded-lg shadow-lg">
+        <h2 class="text-3xl font-bold text-bedsa-blue mb-8 text-center">Student Resources</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Article Card 1: Correlation vs. Causation -->
+            <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                <div class="bg-bedsa-blue h-40 flex items-center justify-center"><i data-feather="zap" class="w-16 h-16 text-white"></i></div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 flex-grow">Correlation vs. Causation: A Trap for Young Players</h3>
+                    <div class="text-sm text-gray-500">By Feda Mohammadi | Sep 1, 2025</div>
+                    <button data-article-id="1" class="read-more-button mt-4 text-bedsa-blue font-semibold hover:underline self-start">Read More &rarr;</button>
                 </div>
-                 <!-- Article Card 2 -->
-                <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col">
-                    <div class="bg-bedsa-blue h-40 flex items-center justify-center"><i data-feather="zap" class="w-16 h-16 text-white"></i></div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-xl font-bold text-gray-800 mb-3 flex-grow">Correlation vs. Causation: A Trap for Young Players</h3>
-                        <div class="text-sm text-gray-500">By Feda Mohammadi | Aug 28, 2025</div>
-                        <button data-article-id="2" class="read-more-button mt-4 text-bedsa-blue font-semibold hover:underline self-start">Read More &rarr;</button>
-                    </div>
+            </div>
+             <!-- Article Card 2: Landing a Job -->
+            <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                <div class="bg-bedsa-blue h-40 flex items-center justify-center"><i data-feather="briefcase" class="w-16 h-16 text-white"></i></div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 flex-grow">Landing Your First Job in Data Science</h3>
+                    <div class="text-sm text-gray-500">By Feda Mohammadi | Aug 28, 2025</div>
+                    <button data-article-id="2" class="read-more-button mt-4 text-bedsa-blue font-semibold hover:underline self-start">Read More &rarr;</button>
                 </div>
-                <!-- Article Card 3 -->
-                <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col">
-                    <div class="bg-bedsa-blue h-40 flex items-center justify-center"><i data-feather="code" class="w-16 h-16 text-white"></i></div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-xl font-bold text-gray-800 mb-3 flex-grow">Your First Data Science Toolkit: Python vs. R</h3>
-                        <div class="text-sm text-gray-500">By Feda Mohammadi | Aug 25, 2025</div>
-                        <button data-article-id="3" class="read-more-button mt-4 text-bedsa-blue font-semibold hover:underline self-start">Read More &rarr;</button>
-                    </div>
+            </div>
+            <!-- Article Card 3: What is Economics -->
+            <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                <div class="bg-bedsa-blue h-40 flex items-center justify-center"><i data-feather="dollar-sign" class="w-16 h-16 text-white"></i></div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 flex-grow">What Is Economics (Really)?</h3>
+                    <div class="text-sm text-gray-500">By Feda Mohammadi | Aug 25, 2025</div>
+                    <button data-article-id="3" class="read-more-button mt-4 text-bedsa-blue font-semibold hover:underline self-start">Read More &rarr;</button>
                 </div>
-                 <!-- Article Card 4 -->
-                <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col">
-                    <div class="bg-bedsa-blue h-40 flex items-center justify-center"><i data-feather="book-open" class="w-16 h-16 text-white"></i></div>
-                    <div class="p-6 flex flex-col flex-grow">
-                       <h3 class="text-xl font-bold text-gray-800 mb-3 flex-grow">Beyond Adam Smith: Minds Shaping Modern Economics</h3>
-                       <div class="text-sm text-gray-500">By Feda Mohammadi | Aug 22, 2025</div>
-                       <button data-article-id="4" class="read-more-button mt-4 text-bedsa-blue font-semibold hover:underline self-start">Read More &rarr;</button>
-                    </div>
+            </div>
+             <!-- Article Card 4: What Do Economists Do -->
+            <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                <div class="bg-bedsa-blue h-40 flex items-center justify-center"><i data-feather="trending-up" class="w-16 h-16 text-white"></i></div>
+                <div class="p-6 flex flex-col flex-grow">
+                   <h3 class="text-xl font-bold text-gray-800 mb-3 flex-grow">What Do Economists Do?</h3>
+                   <div class="text-sm text-gray-500">By Feda Mohammadi | Aug 22, 2025</div>
+                   <button data-article-id="4" class="read-more-button mt-4 text-bedsa-blue font-semibold hover:underline self-start">Read More &rarr;</button>
+                </div>
+            </div>
+            <!-- Article Card 5: Python vs R -->
+            <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                <div class="bg-bedsa-blue h-40 flex items-center justify-center"><i data-feather="code" class="w-16 h-16 text-white"></i></div>
+                <div class="p-6 flex flex-col flex-grow">
+                   <h3 class="text-xl font-bold text-gray-800 mb-3 flex-grow">Your First Data Science Toolkit: Python vs. R</h3>
+                   <div class="text-sm text-gray-500">By Feda Mohammadi | Aug 19, 2025</div>
+                   <button data-article-id="5" class="read-more-button mt-4 text-bedsa-blue font-semibold hover:underline self-start">Read More &rarr;</button>
+                </div>
+            </div>
+            <!-- Article Card 6: Top Skills -->
+            <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                <div class="bg-bedsa-blue h-40 flex items-center justify-center"><i data-feather="star" class="w-16 h-16 text-white"></i></div>
+                <div class="p-6 flex flex-col flex-grow">
+                   <h3 class="text-xl font-bold text-gray-800 mb-3 flex-grow">Top Skills You Need To Become A Data Scientist</h3>
+                   <div class="text-sm text-gray-500">By Feda Mohammadi | Aug 16, 2025</div>
+                   <button data-article-id="6" class="read-more-button mt-4 text-bedsa-blue font-semibold hover:underline self-start">Read More &rarr;</button>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- This container is hidden by default and shows the full article -->
-    <div id="article-view" style="display: none;">
-        <!-- Article 1 Full Content -->
-        <div id="article-content-1" class="article-content-view hidden bg-white p-8 md:p-12 rounded-lg shadow-lg">
-            <button class="back-to-resources-button mb-8 text-bedsa-blue font-semibold hover:underline">&larr; Back to All Resources</button>
-            <h2 class="text-3xl md:text-4xl font-extrabold text-bedsa-blue mb-4">Landing Your First Job in Econ & Data Science</h2>
-            <div class="text-md text-gray-500 mb-8 border-b pb-4">By Feda Mohammadi | September 1, 2025</div>
-            <div class="prose max-w-none text-gray-700 space-y-4 leading-relaxed">
-                <p>Stepping into the job market with a background in economics and data science is an exciting prospect. You possess a unique and powerful blend of analytical rigor from economics and technical skill from data science, a combination that is in extremely high demand across countless industries. But navigating the entry-level landscape can feel like trying to find a needle in a haystack. The sheer number of job titles can be overwhelming: Data Analyst, Research Analyst, Financial Analyst, Business Intelligence Analyst... the list goes on. How do you know which path is right for you? Let’s break down the landscape, demystify the roles, and give you a concrete roadmap for landing that first great job.</p>
-                <h3>Common Entry-Level Roles: Finding Your Fit</h3>
-                <p>First, let’s understand the core functions behind the titles. While a specific role can vary by company and industry, most entry-level positions fall into a few key categories:</p>
-                <ul>
-                    <li><strong>Data Analyst:</strong> This is the most common entry point and a fantastic way to build foundational skills. As a data analyst, you are a detective. You'll be responsible for collecting, cleaning, exploring, and analyzing data to uncover insights that answer business questions. A typical day might involve writing SQL queries to pull data, using Python or R to perform statistical analysis, creating dashboards in tools like Tableau or Power BI to track key metrics, and presenting your findings to help leaders make informed decisions. Your economics background gives you a massive edge here because you don't just see numbers; you understand the underlying economic principles of supply and demand, incentives, and market behavior that drive those numbers.</li>
-                    <li><strong>Research Assistant/Analyst:</strong> This role is prevalent in academia, think tanks (like the Brookings Institution), and government agencies (like the Federal Reserve or the World Bank). It involves supporting larger research projects under the guidance of senior economists or researchers. You might be tasked with running complex statistical models (econometrics is key here!), conducting thorough literature reviews to understand the existing body of knowledge, and helping to prepare charts, tables, and sections for academic papers or policy reports. It's a perfect fit if you enjoy deep, focused analysis and are considering graduate school.</li>
-                    <li><strong>Financial Analyst:</strong> If you're drawn to the world of finance, this role uses your skills to analyze financial statements, build forecasting models to predict company earnings or market trends, and assess the value of stocks, bonds, and other investment opportunities. You'll apply economic principles directly to understand market dynamics, interest rate movements, and company performance within the broader economy.</li>
-                    <li><strong>Business Analyst:</strong> This role often serves as a crucial bridge between the technical data team and other business departments like marketing, sales, or operations. You'll use data to understand business processes, identify pain points or opportunities for improvement, and recommend concrete solutions. This position requires strong communication and stakeholder management skills in addition to your technical abilities, as you'll be translating business needs into data questions and data insights back into business strategy.</li>
-                </ul>
-                <h3>The Skills That Actually Get You Hired</h3>
-                <p>A degree gets your resume looked at, but demonstrable skills get you the job. Regardless of the title, hiring managers are looking for a core set of competencies. Your goal is to showcase these skills through your coursework, projects, and internship experiences.</p>
-                <ul>
-                    <li><strong>Technical Proficiency:</strong> You must be comfortable with the tools of the trade. <strong>SQL is non-negotiable.</strong> You will be asked about it in interviews, and you will use it on the job. Beyond that, you need a strong command of a scripting language. The choice is typically between <strong>Python</strong> (with its powerful libraries like Pandas, NumPy, Matplotlib, and Scikit-learn) or <strong>R</strong> (especially the Tidyverse ecosystem). Being proficient in at least one is essential.</li>
-                    <li><strong>Statistical and Econometric Knowledge:</strong> This is where your economics major shines. You must have a solid grasp of core concepts like regression analysis (linear and logistic), hypothesis testing, confidence intervals, and probability. Be prepared to explain a concept like p-value or R-squared in simple terms. This demonstrates that you understand the "why" behind your models, not just how to run the code.</li>
-                    <li><strong>Communication and Visualization:</strong> Finding a brilliant insight is useless if you can't explain it clearly to someone who isn't a data expert. You must be able to tell a compelling story with data. Practice creating clean, uncluttered, and insightful charts in tools like Tableau, or with libraries like Python's Matplotlib/Seaborn or R's ggplot2. Being able to walk someone through your analysis in a simple, narrative-driven way is perhaps the most underrated skill in the field.</li>
-                </ul>
-                <h3>Your Secret Weapon: The Portfolio Project</h3>
-                <p>A degree proves you can learn, but a portfolio of projects proves you can *do*. This is your chance to stand out. A club like BEDSA is the perfect place to start. Collaborate on a project, or find a topic you're passionate about and do your own analysis. Find a compelling public dataset from sources like Kaggle, the World Bank, FRED (Federal Reserve Economic Data), or a government open data portal. Ask a clear, interesting question. Then, walk through the entire process: data cleaning, exploratory analysis, modeling, and summarizing your findings. Document your work in a GitHub repository with clean code and a detailed README file, or write a blog post about it. A single, well-executed project that you can talk about in depth during an interview is often more impressive than a long list of coursework. Your portfolio is your proof, so start building it today.</p>
-            </div>
+<!-- This container is hidden by default and shows the full article view -->
+<div id="article-view" style="display: none;">
+
+    <!-- Article 1 Content -->
+    <div id="article-content-1" class="article-content-view hidden">
+        <button class="back-to-resources-button mb-8 text-bedsa-blue font-semibold hover:underline">&larr; Back to All Resources</button>
+        <div class="article-layout">
+            <!-- Table of Contents -->
+            <aside class="toc-sidebar">
+                <h3 class="text-lg font-bold mb-4">In This Article</h3>
+                <nav>
+                    <ul>
+                        <li><a href="#article-1-sec-1" class="toc-link block py-2 hover:underline">Introduction</a></li>
+                        <li><a href="#article-1-sec-2" class="toc-link block py-2 hover:underline">Correlation Explained</a></li>
+                        <li><a href="#article-1-sec-3" class="toc-link block py-2 hover:underline">The Bold Claim of Causation</a></li>
+                        <li><a href="#article-1-sec-4" class="toc-link block py-2 hover:underline">Common Mistakes</a></li>
+                        <li><a href="#article-1-sec-5" class="toc-link block py-2 hover:underline">Key Takeaways</a></li>
+                        <li><a href="#article-1-sec-6" class="toc-link block py-2 hover:underline">References</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <!-- Article Body -->
+            <article class="article-body">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-bedsa-blue mb-4">Correlation vs. Causation: A Trap for Young Players</h2>
+                <div class="text-md text-gray-500 mb-8 border-b pb-4">By Feda Mohammadi | September 1, 2025</div>
+                <div class="prose max-w-none text-gray-700 space-y-6 leading-relaxed">
+                    <section id="article-1-sec-1">
+                        <h3>Introduction: The Most Important Rule in Data</h3>
+                        <p>In the world of data analysis, there is one idea so important, yet so often misunderstood, that it creates a clear line between a beginner and an expert. This idea is the difference between correlation and causation. As students who work with both economics and data, understanding this difference is more than just a school exercise. It is a vital thinking skill that helps you avoid making silly or even dangerous mistakes. Getting this wrong can lead to absurd conclusions, wasted money, and bad decisions in policy and business. It is a fundamental trap that every new analyst must learn to recognize and avoid.</p>
+                    </section>
+                    <section id="article-1-sec-2">
+                        <h3>Correlation Explained: Just a Connection</h3>
+                        <p>At its heart, correlation is a simple concept. It is a statistical measurement that tells us there is a relationship between two things, or variables. When one variable changes, the other variable tends to change in a consistent way. We see a few types of correlation:</p>
+                        <ul>
+                            <li><strong>Positive Correlation:</strong> This is when one variable goes up, and the other variable tends to go up too. A simple example is the connection between hot weather and sales of ice cream. As the temperature increases during the summer, ice cream shops usually sell more of their product.</li>
+                            <li><strong>Negative Correlation:</strong> This is when one variable goes up, and the other variable tends to go down. Think about the relationship between how many hours a student studies for a test and how many mistakes they make. In general, more time spent studying is connected to fewer errors on the exam.</li>
+                        </ul>
+                        <p>Finding a correlation is often the exciting first step when looking at data. It is easy to calculate and can show us interesting patterns that are worth looking into more deeply. The biggest danger is stopping at that point. It is very tempting to see a strong connection and immediately decide that one thing must have caused the other. This is where the real problems start.</p>
+                    </section>
+                    <section id="article-1-sec-3">
+                        <h3>The Bold Claim of Causation</h3>
+                        <p>Causation, or causality, is a much stronger and more difficult thing to prove. It means that a change in one variable directly *causes* a change in another. There is a real mechanism or process that links the two. For a relationship to be causal, we need to be sure that the effect would not have happened without the cause, and that there is not some other hidden factor involved. For instance, when you flip a light switch, it causes the light to turn on. When you press the gas pedal in a car, it causes the car to speed up. There is a direct and provable link.</p>
+                    </section>
+                    <section id="article-1-sec-4">
+                        <h3>Common Mistakes: The Hidden Variable</h3>
+                        <p>Let's look at the most famous example used to explain this problem. If you study data from a city, you will almost definitely find a strong positive correlation between ice cream sales and the crime rate. On days when more ice cream is sold, the crime rate is also higher. A beginner analyst might conclude that eating ice cream makes people commit crimes. The recommendation from this analysis would be ridiculous. Should we forbid ice cream to make our cities safer?</p>
+                        <p>Of course, the answer is no. This is a perfect example of a hidden or "confounding" variable. In this case, the hidden variable is the weather, specifically the heat. When it is hot outside, two separate things happen. First, more people buy ice cream to feel cooler. Second, more people are outside of their homes, walking around and interacting with others, which creates more opportunities for arguments and crime. The hot weather causes an increase in both ice cream sales and crime. This creates a fake correlation between them, but one does not cause the other. The ice cream is not the problem at all. The heat is the common cause that affects both things.</p>
+                    </section>
+                     <section id="article-1-sec-5">
+                        <h3 class="key-takeaways-title">Key Takeaways</h3>
+                        <ul class="key-takeaways-list">
+                            <li><strong>Correlation is Not Causation:</strong> The most important rule in data analysis is that just because two things are related does not mean one causes the other.</li>
+                            <li><strong>Look for Hidden Variables:</strong> Always ask yourself if a third, unobserved factor could be causing both variables to change at the same time.</li>
+                            <li><strong>Causation is Hard to Prove:</strong> Claiming one thing causes another requires strong evidence, often from carefully designed experiments, not just observational data.</li>
+                        </ul>
+                    </section>
+                    <section id="article-1-sec-6">
+                        <h3 class="references-title">References</h3>
+                        <ul class="references-list">
+                            <li>Pearl, J., & Mackenzie, D. (2018). *The Book of Why: The New Science of Cause and Effect*. Basic Books.</li>
+                            <li>Wheelan, C. (2013). *Naked Statistics: Stripping the Dread from the Data*. W. W. Norton & Company.</li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="author-info">
+                    <h4>Author Information</h4>
+                    <p></strong> Feda Mohammadi</p>
+                    <p></strong> mohammadi@berea.edu</p>
+                    <p></strong> Economics and Computer Science</p>
+                    <p>Berea College</p>
+                </div>
+            </article>
         </div>
-        <!-- Article 2 Full Content -->
-        <div id="article-content-2" class="article-content-view hidden bg-white p-8 md:p-12 rounded-lg shadow-lg">
-            <button class="back-to-resources-button mb-8 text-bedsa-blue font-semibold hover:underline">&larr; Back to All Resources</button>
-            <h2 class="text-3xl md:text-4xl font-extrabold text-bedsa-blue mb-4">Correlation vs. Causation: A Trap for Young Players</h2>
-            <div class="text-md text-gray-500 mb-8 border-b pb-4">By Feda Mohammadi | August 28, 2025</div>
-            <div class="prose max-w-none text-gray-700 space-y-4 leading-relaxed">
-                <p>In the world of data, there is one concept so fundamental, yet so frequently misunderstood, that it forms a great dividing line between novice and expert. That concept is the crucial difference between correlation and causation. As students of economics and data science, mastering this distinction isn't just an academic exercise—it is a critical thinking skill that separates sloppy, dangerous analysis from sound, actionable insight. Getting this wrong can lead to absurd conclusions, wasted resources, and terrible policy decisions. It's the essential trap that every aspiring analyst must learn to spot and avoid.</p>
-                <h3>What is Correlation? It's Just a Relationship.</h3>
-                <p>At its core, correlation is simple. It's a statistical measure that describes a relationship or connection between two variables. When one variable changes, the other tends to change in a predictable way. We can have:</p>
-                <ul>
-                    <li><strong>Positive Correlation:</strong> When one variable increases, the other also tends to increase. A classic example is the relationship between temperature and ice cream sales. As the thermometer rises in the summer, the cash registers at ice cream shops ring more frequently.</li>
-                    <li><strong>Negative Correlation:</strong> When one variable increases, the other tends to decrease. Think about the relationship between the number of hours a student studies and the number of errors they make on an exam. Generally, more study time is associated with fewer mistakes.</li>
-                </ul>
-                <p>Finding correlation is often the first, exciting step in data analysis. It's relatively easy to calculate and can point us toward interesting patterns that are worthy of further investigation. The great danger lies in stopping there. It's tempting to see a strong correlation and immediately jump to a conclusion about what caused it. This is where the trouble begins.</p>
-                <h3>What is Causation? It's a Much Bolder Claim.</h3>
-                <p>Causation, or causality, is a far more powerful and difficult-to-prove claim. It means that a change in one variable directly *causes* a change in another. There is an underlying mechanism connecting the two. For a correlation to be causal, we must be certain that the effect wouldn't have occurred without the cause and that there isn't some other factor at play. For example, flipping a light switch *causes* the light to turn on. Pushing on the gas pedal *causes* a car to accelerate. There's a direct, verifiable link.</p>
-                <h3>The Lurking Variable: Ice Cream, Crime, and Summer Heat</h3>
-                <p>Let’s explore the most famous example used to illustrate this fallacy. If you analyze city-level data, you will almost certainly find a strong positive correlation between ice cream sales and the crime rate. On days when ice cream sales are high, crime rates are also high. A naive analysis would conclude that eating ice cream causes people to commit crimes. The policy recommendation would be absurd: should we ban ice cream to make our cities safer?</p>
-                <p>Of course not. This is a textbook case of a "lurking" or "confounding" variable. In this situation, the lurking variable is the weather, specifically the temperature. When it's hot outside, two things happen independently: 1) more people buy ice cream to cool down, and 2) more people are out of their homes, walking around, and interacting in public spaces, which increases the opportunity for social friction and, sadly, crime. The heat causes an increase in *both* variables, creating a spurious correlation between them, but one does not cause the other. The ice cream isn't the problem; the heat is the common cause.</p>
-                <h3>Why This is the Central Challenge of Economics</h3>
-                <p>This concept is the absolute bedrock of modern econometrics and applied economics. Economists are constantly trying to determine if a policy, event, or action caused a specific outcome, or if the relationship is merely correlational. We can't run controlled experiments for most of the big questions we care about. We can't create two identical countries, apply a policy to one, and see what happens. So, we have to use data and clever statistical methods to try and untangle these complex relationships. Consider these classic economic questions:</p>
-                <ul>
-                    <li>Did a recent increase in the minimum wage *cause* unemployment to rise, or were both the wage hike and the job losses driven by a broader economic downturn that was already underway?</li>
-                    <li>Does attending college *cause* people to have higher lifetime earnings? Or is it that the type of people who are admitted to and complete college (perhaps more ambitious, intelligent, or from more privileged backgrounds) would have earned more anyway, and college is just a signal of those pre-existing traits?</li>
-                </ul>
-                <p>To get closer to answering these questions, economists and data scientists use a sophisticated toolkit. This includes techniques like randomized controlled trials (RCTs), where feasible, which are the gold standard for establishing causality. It also includes methods like regression analysis (where we can "control for" the effects of other variables, like the weather in our ice cream example), instrumental variables, and regression discontinuity designs. The entire goal is to isolate the true causal impact of one variable on another. So next time you see a headline that says "Study shows X is linked to Y," put on your analyst hat and ask the crucial question that separates the amateurs from the pros: Is it just a correlation, or is it causation?</p>
-            </div>
+    </div>
+
+    <!-- Article 2 Content -->
+    <div id="article-content-2" class="article-content-view hidden">
+        <button class="back-to-resources-button mb-8 text-bedsa-blue font-semibold hover:underline">&larr; Back to All Resources</button>
+        <div class="article-layout">
+            <aside class="toc-sidebar">
+                <h3 class="text-lg font-bold mb-4">In This Article</h3>
+                <nav>
+                    <ul>
+                        <li><a href="#article-2-sec-1" class="toc-link block py-2 hover:underline">Introduction</a></li>
+                        <li><a href="#article-2-sec-2" class="toc-link block py-2 hover:underline">Common Entry-Level Roles</a></li>
+                        <li><a href="#article-2-sec-3" class="toc-link block py-2 hover:underline">Building Your Resume</a></li>
+                        <li><a href="#article-2-sec-4" class="toc-link block py-2 hover:underline">The Power of Projects</a></li>
+                        <li><a href="#article-2-sec-5" class="toc-link block py-2 hover:underline">Key Takeaways</a></li>
+                        <li><a href="#article-2-sec-6" class="toc-link block py-2 hover:underline">References</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <article class="article-body">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-bedsa-blue mb-4">Landing Your First Job in Data Science</h2>
+                <div class="text-md text-gray-500 mb-8 border-b pb-4">By Feda Mohammadi | August 28, 2025</div>
+                <div class="prose max-w-none text-gray-700 space-y-6 leading-relaxed">
+                    <section id="article-2-sec-1">
+                        <h3>Introduction: Starting Your Career</h3>
+                        <p>Beginning your career in data science is an exciting step. Companies in almost every industry are looking for people who can work with data to find valuable insights. However, finding your first job can feel challenging because there are so many different roles and titles. You might see jobs called Data Analyst, Business Intelligence Analyst, or Junior Data Scientist. It can be hard to know where to start. This guide will help you understand the different jobs available and give you a clear plan for getting your first position in this growing field.</p>
+                    </section>
+                    <section id="article-2-sec-2">
+                        <h3>Common Entry-Level Roles: Finding Your Place</h3>
+                        <p>Let's look at the main types of jobs you will find. Even though the titles can be different, most first jobs in data fall into a few groups:</p>
+                        <ul>
+                            <li><strong>Data Analyst:</strong> This is the most common starting point. As a data analyst, your main job is to answer questions using data. You will collect data, clean it to make it usable, and then analyze it to find patterns. You will likely use tools like SQL to get data from databases, and then use something like Python, R, or Excel to study it. You will also create charts and dashboards to share what you have found with others in the company.</li>
+                            <li><strong>Business Intelligence (BI) Analyst:</strong> This role is very similar to a data analyst, but with a special focus on tracking business performance. A BI analyst builds and manages dashboards that show how the company is doing. For example, they might track daily sales, website traffic, or customer satisfaction. This helps company leaders make quick, informed decisions based on the most current information.</li>
+                            <li><strong>Junior Data Scientist:</strong> This title is sometimes used for roles that are more focused on prediction. A junior data scientist might help build simple machine learning models. For example, they could work on a model that predicts which customers are likely to stop using a service. These jobs often require a stronger understanding of statistics and programming than a typical data analyst role.</li>
+                        </ul>
+                    </section>
+                    <section id="article-2-sec-3">
+                        <h3>Building Your Resume: The Skills Companies Want</h3>
+                        <p>Your classes give you knowledge, but companies hire you for your skills. To get a job, you need to show that you can actually do the work. Here are the core skills that hiring managers look for:</p>
+                        <ul>
+                            <li><strong>SQL:</strong> This is the language used to communicate with databases. It is the most important technical skill for almost any data job. You absolutely must know SQL. You will be tested on it in interviews and you will use it every day at work.</li>
+                            <li><strong>A Programming Language:</strong> You need to be comfortable with at least one programming language for data analysis. The most common choices are Python and R. You should know how to use libraries like Pandas in Python or the Tidyverse in R to clean, change, and analyze data.</li>
+                            <li><strong>Data Visualization:</strong> It is not enough to find something interesting in the data. You have to be able to show it to others in a way that is easy to understand. You should learn how to use a tool like Tableau or Power BI, or use plotting libraries in Python or R to create clear and effective charts.</li>
+                            <li><strong>Communication:</strong> This is a very important skill. You must be able to explain what you found in the data to people who are not data experts. You need to be able to tell a clear story that helps people understand the information and what it means for the business.</li>
+                        </ul>
+                    </section>
+                    <section id="article-2-sec-4">
+                        <h3>The Power of Projects: Show, Don't Just Tell</h3>
+                        <p>A degree shows that you can learn, but a portfolio of your own projects shows that you can do the work. This is the best way to make yourself stand out from other applicants. You do not need many projects. One or two good projects that you can talk about in detail is better than a long list of simple ones. Find a dataset online about a topic you find interesting. Ask a specific question about it. Then, go through the whole process of cleaning the data, analyzing it, and visualizing your results. You can write a short report or blog post about what you did. This gives you something real to show employers and proves you have the skills they need.</p>
+                    </section>
+                     <section id="article-2-sec-5">
+                        <h3 class="key-takeaways-title">Key Takeaways</h3>
+                        <ul class="key-takeaways-list">
+                            <li><strong>Master the Fundamentals:</strong> Focus on getting very good at SQL, a programming language like Python or R, and a visualization tool like Tableau.</li>
+                            <li><strong>Build a Portfolio:</strong> Complete at least one personal data project from start to finish to prove your skills to employers.</li>
+                            <li><strong>Practice Communicating:</strong> Work on explaining technical ideas in simple terms. This skill is just as important as your technical abilities.</li>
+                            <li><strong>Start with Analyst Roles:</strong> Data Analyst and BI Analyst roles are the most common and accessible entry points into the field of data science.</li>
+                        </ul>
+                    </section>
+                    <section id="article-2-sec-6">
+                        <h3 class="references-title">References</h3>
+                        <ul class="references-list">
+                            <li>McKinney, W. (2017). *Python for Data Analysis*. O'Reilly Media.</li>
+                            <li>Hardy, T. (2020). *The Senior Data Scientist*. Taylor & Francis.</li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="author-info">
+                    <h4>Author Information</h4>
+                    <p></strong> Aziza Altyyeva</p>
+                    <p></strong> altyyevaa@berea.edu</p>
+                    <p></strong> Mathematics</p>
+                    <p>Berea College</p>
+                </div>
+            </article>
         </div>
-        <!-- Article 3 Full Content -->
-        <div id="article-content-3" class="article-content-view hidden bg-white p-8 md:p-12 rounded-lg shadow-lg">
-            <button class="back-to-resources-button mb-8 text-bedsa-blue font-semibold hover:underline">&larr; Back to All Resources</button>
-            <h2 class="text-3xl md:text-4xl font-extrabold text-bedsa-blue mb-4">Your First Data Science Toolkit: Python vs. R</h2>
-            <div class="text-md text-gray-500 mb-8 border-b pb-4">By Feda Mohammadi | August 25, 2025</div>
-            <div class="prose max-w-none text-gray-700 space-y-4 leading-relaxed">
-                <p>As you dive into the exciting world of data science, you'll quickly encounter one of the field's foundational debates: which programming language should you learn first? The two undisputed champions, the titans of the data world, are Python and R. Both are free, open-source, powerful, and have massive, supportive communities that have created an incredible ecosystem of tools and packages. But they were born from different philosophies and have distinct strengths. Choosing which one to start with can feel like a daunting decision. So, which one should you invest your time in? Let's break down the great Python vs. R debate.</p>
-                <h3>R: The Statistician's Native Language</h3>
-                <p>R was built by statisticians, for statisticians. Its primary purpose, from its inception, has been statistical analysis and data visualization. If you come from a background heavy in econometrics or social science research, R's syntax and data structures (like data frames and vectors) might feel very natural and intuitive. It's designed around the workflow of an analyst.</p>
-                <ul>
-                    <li><strong>Core Strengths:</strong> R's greatest strength is its unparalleled ecosystem of packages for nearly every statistical method imaginable. If a new, cutting-edge statistical technique is published in an academic paper, chances are it will be available as an R package first. The Tidyverse, a collection of packages designed for data science that share a common design philosophy, is a work of art. Packages like <strong>ggplot2</strong> for data visualization are widely considered the gold standard for creating publication-quality graphics with a concise and logical grammar. Packages like <strong>dplyr</strong> and <strong>tidyr</strong> make the often-painful process of data cleaning and manipulation elegant and powerful. For many complex statistical tasks, academic research, and bioinformatics, R remains the undisputed king.</li>
-                    <li><strong>Potential Weaknesses:</strong> R can be a bit quirky when used as a general-purpose programming language. Its syntax is different from most other popular languages (like Java, C++, or Python), which can make it a bit harder to pick up other languages later. While it's possible to build web apps (with Shiny) or put models into production with R, it's generally less common and the tooling is less mature than in the Python ecosystem.</li>
-                    <li><strong>Who is it for?</strong> Students who are certain they want to go into academic research, a Ph.D. program, or a role as a dedicated statistician or quantitative analyst will feel perfectly at home with R.</li>
-                </ul>
-                <h3>Python: The Versatile All-Purpose Powerhouse</h3>
-                <p>Python was designed from the start as a general-purpose programming language with a focus on code readability and simplicity. Its popularity in data science is a more recent phenomenon, exploding with the development of a suite of powerful libraries that made it a fantastic environment for data analysis and, especially, machine learning.</p>
-                 <ul>
-                    <li><strong>Core Strengths:</strong> Python's number one advantage is its incredible versatility. It's the Swiss Army knife of programming. You can use it for data analysis, but you can also use it for web development (with frameworks like Django and Flask), scripting and automation, game development, and more. This makes it an incredibly valuable skill to have on your resume. Its syntax is clean, consistent, and generally considered easier for complete beginners to learn. The core data science libraries, often called the "PyData" stack, are robust and mature: <strong>Pandas</strong> (for data manipulation, inspired by R's data frames), <strong>NumPy</strong> (for numerical operations), <strong>Matplotlib</strong> and <strong>Seaborn</strong> (for plotting), and <strong>Scikit-learn</strong> (the go-to library for machine learning). When it comes to building and deploying machine learning models at scale, Python is the industry standard.</li>
-                    <li><strong>Potential Weaknesses:</strong> While Python's visualization libraries are very powerful, many analysts argue that R's ggplot2 allows for the creation of complex and beautiful plots with more intuitive code. For some very niche statistical methods, a package might be available in R before it is in Python.</li>
-                    <li><strong>Who is it for?</strong> Students who want a versatile "do-it-all" language, are particularly interested in machine learning and AI, or see themselves working in a tech company where they might need to collaborate with software engineers, will find Python to be an excellent choice.</li>
-                </ul>
-                <h3>The Verdict: You Can't Lose, But Here's a Recommendation</h3>
-                <p>Here's the honest, and perhaps unsatisfying, answer: **you can't go wrong with either.** Both are excellent choices, they are more similar than they are different, and many data professionals know how to use both, picking the right tool for the job. Learning one makes learning the other much easier.</p>
-                <p>However, if you're a student starting today and need a recommendation, here it is: <strong>Start with Python.</strong></p>
-                <p>For most students entering the job market now, Python is the more strategic first choice. Its versatility opens up a wider range of job opportunities, and its clear dominance in the rapidly growing fields of machine learning and AI makes it an invaluable, future-proof skill. Since it's also a fantastic general-purpose language, the programming fundamentals you learn are more broadly applicable across the tech landscape. Once you are comfortable with data analysis in Python, you'll be able to pick up R's Tidyverse in a weekend if a specific project or course requires it.</p>
-                <p>Remember, the ultimate goal is not to become a great Python or R programmer, but to become a great analyst, a great problem-solver, and a great thinker. The language is just the tool. Pick one, master the fundamentals of cleaning, exploring, modeling, and communicating with data, and you'll be well on your way to a successful career.</p>
-            </div>
+    </div>
+
+    <!-- Article 3 Content -->
+    <div id="article-content-3" class="article-content-view hidden">
+        <button class="back-to-resources-button mb-8 text-bedsa-blue font-semibold hover:underline">&larr; Back to All Resources</button>
+        <div class="article-layout">
+            <aside class="toc-sidebar">
+                <h3 class="text-lg font-bold mb-4">In This Article</h3>
+                <nav>
+                    <ul>
+                        <li><a href="#article-3-sec-1" class="toc-link block py-2 hover:underline">Introduction</a></li>
+                        <li><a href="#article-3-sec-2" class="toc-link block py-2 hover:underline">The Problem of Scarcity</a></li>
+                        <li><a href="#article-3-sec-3" class="toc-link block py-2 hover:underline">Micro vs. Macro</a></li>
+                        <li><a href="#article-3-sec-4" class="toc-link block py-2 hover:underline">Thinking Like an Economist</a></li>
+                        <li><a href="#article-3-sec-5" class="toc-link block py-2 hover:underline">Key Takeaways</a></li>
+                        <li><a href="#article-3-sec-6" class="toc-link block py-2 hover:underline">References</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <article class="article-body">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-bedsa-blue mb-4">What Is Economics (Really)?</h2>
+                <div class="text-md text-gray-500 mb-8 border-b pb-4">By Feda Mohammadi | August 25, 2025</div>
+                <div class="prose max-w-none text-gray-700 space-y-6 leading-relaxed">
+                    <section id="article-3-sec-1">
+                        <h3>Introduction: More Than Just Money</h3>
+                        <p>When most people hear the word "economics," they usually think of money, taxes, or the stock market. While those things are part of economics, they are only a small piece of a much bigger puzzle. At its core, economics is the study of how people make choices. It is a social science that looks at how individuals, businesses, and governments decide how to use their limited resources to satisfy their unlimited wants. It is a way of thinking that can help us understand the world in a new and powerful way, from our personal decisions to the biggest global issues.</p>
+                    </section>
+                    <section id="article-3-sec-2">
+                        <h3>The Fundamental Problem of Scarcity</h3>
+                        <p>The single most important idea in all of economics is scarcity. Scarcity means that we do not have enough resources to produce all the things we want. This is true for everyone. You have a limited amount of time in a day and a limited amount of money in your bank account. A country has a limited number of workers, a limited amount of land, and a limited supply of machines. Because of scarcity, we are forced to make choices. Every time you choose to do something, you are also choosing not to do something else. This is called an opportunity cost. The opportunity cost of any decision is the value of the next best thing you gave up. For example, if you decide to spend two hours watching a movie, the opportunity cost is whatever else you could have done with that time, like studying for a test or working at your job. Economics is the study of how we deal with these trade-offs that scarcity creates.</p>
+                    </section>
+                    <section id="article-3-sec-3">
+                        <h3>Microeconomics vs. Macroeconomics: Two Sides of the Same Coin</h3>
+                        <p>The field of economics is typically divided into two main branches. They look at the same problems but from different points of view.</p>
+                        <ul>
+                            <li><strong>Microeconomics:</strong> This is the study of individual economic actors. Microeconomics looks at the choices made by single people, families, or companies. It asks questions like: How does a company decide what price to charge for its product? How does a family decide how to spend its budget? How do wages get determined for different jobs? It focuses on how supply and demand work together in individual markets to set prices.</li>
+                            <li><strong>Macroeconomics:</strong> This is the study of the economy as a whole. Macroeconomics looks at the big picture. It asks questions about things that affect the entire country or even the world. For example: What causes inflation, which is the general increase in prices? What causes unemployment? Why do some countries' economies grow much faster than others? Macroeconomics studies things like Gross Domestic Product (GDP), which is the total value of everything a country produces.</li>
+                        </ul>
+                        <p>Even though they seem different, microeconomics and macroeconomics are closely connected. The health of the whole economy depends on the millions of individual choices made by people and businesses every day.</p>
+                    </section>
+                    <section id="article-3-sec-4">
+                        <h3>Thinking Like an Economist: A Way of Seeing the World</h3>
+                        <p>More than just a subject, economics is a way of thinking. Economists are trained to look at the world by focusing on a few key ideas. They assume that people are generally rational and respond to incentives. An incentive is anything that motivates someone to act, like a reward or a punishment. For example, if the price of gasoline goes up, people have an incentive to drive less or buy a more fuel efficient car. Economists also spend a lot of time thinking about unintended consequences. Sometimes, a policy that is meant to help can have surprising and negative side effects because of how people react to the new incentives it creates. By understanding these core principles, you can start to see the hidden economic forces that shape our lives and the world around us.</p>
+                    </section>
+                     <section id="article-3-sec-5">
+                        <h3 class="key-takeaways-title">Key Takeaways</h3>
+                        <ul class="key-takeaways-list">
+                            <li><strong>Economics is the study of choice:</strong> It examines how people use limited resources to satisfy unlimited wants.</li>
+                            <li><strong>Scarcity is the core problem:</strong> Because we can't have everything, we must make trade-offs, which creates opportunity costs.</li>
+                            <li><strong>Micro and Macro are two perspectives:</strong> Microeconomics focuses on individual choices, while macroeconomics looks at the economy as a whole.</li>
+                            <li><strong>It's a way of thinking:</strong> Economics is built on ideas like incentives and unintended consequences to explain human behavior.</li>
+                        </ul>
+                    </section>
+                    <section id="article-3-sec-6">
+                        <h3 class="references-title">References</h3>
+                        <ul class="references-list">
+                            <li>Mankiw, N. G. (2020). *Principles of Economics*. Cengage Learning.</li>
+                            <li>Heilbroner, R. L. (1999). *The Worldly Philosophers: The Lives, Times, and Ideas of the Great Economic Thinkers*. Simon & Schuster.</li>
+                        </ul>
+                    </section>
+                </div>
+                 <div class="author-info">
+                    <h4>Author Information</strong></h4>
+                    <p></strong> Feda Mohammadi</strong></p>
+                    <p></strong> mohammadi@berea.edu</strong></p>
+                    <p></strong> Economics and Computer Science</strong></p>
+                    <p></strong>Berea College</strong></p>
+                </div>
+            </article>
         </div>
-        <!-- Article 4 Full Content -->
-        <div id="article-content-4" class="article-content-view hidden bg-white p-8 md:p-12 rounded-lg shadow-lg">
-            <button class="back-to-resources-button mb-8 text-bedsa-blue font-semibold hover:underline">&larr; Back to All Resources</button>
-            <h2 class="text-3xl md:text-4xl font-extrabold text-bedsa-blue mb-4">Beyond Adam Smith: Minds Shaping Modern Economics</h2>
-            <div class="text-md text-gray-500 mb-8 border-b pb-4">By Feda Mohammadi | August 22, 2025</div>
-            <div class="prose max-w-none text-gray-700 space-y-4 leading-relaxed">
-                <p>When you begin your journey into economics, you inevitably start with one towering figure: Adam Smith. As the 18th-century Scottish philosopher and author of "The Wealth of Nations," he is rightfully hailed as the father of modern economics, the champion of free markets, and the originator of the powerful "invisible hand" metaphor. While his contributions were monumental and laid the very foundation of the field, economics has evolved dramatically over the past 250 years. It is a living, breathing discipline that constantly questions its own assumptions. To truly understand the economic debates of today, you need to know the intellectual giants who challenged old ideas, responded to new crises, and forged entirely new paths of inquiry.</p>
-                <h3>John Maynard Keynes: The Architect of Macroeconomics</h3>
-                <p>If Adam Smith represents the classical view of serene, self-regulating markets, John Maynard Keynes represents the revolution born from chaos. Writing during the worldwide economic catastrophe of the Great Depression in the 1930s, Keynes looked at the world and saw that classical theories were failing. He argued forcefully that economies could get stuck in long, painful periods of high unemployment, and that waiting for the "invisible hand" to fix things was not a viable option. He contended that, contrary to classical belief, prices and wages were "sticky" downwards and wouldn't adjust quickly enough to restore the economy to full employment. His transformative idea, laid out in his masterwork, "The General Theory of Employment, Interest and Money," was that in a severe downturn, the government must step in to manage the economy. He argued that governments should use fiscal policy—increasing government spending or cutting taxes—to boost aggregate demand and jolt the economy back to life. In doing so, Keynes didn't just offer a solution; he created the entire field of macroeconomics, which studies the economy as a whole.</p>
-                <h3>Milton Friedman: The Counter-Revolutionary</h3>
-                <p>For decades after Keynes, his ideas dominated economic policy. But in the latter half of the 20th century, a powerful counter-argument emerged, led by Milton Friedman. A Nobel laureate and leader of the "Chicago school" of economics, Friedman argued that Keynesian government intervention often did more harm than good. He was a staunch advocate for free markets, individual liberty, and a limited role for government. Friedman's most influential contribution was in monetary policy. He argued that inflation was "always and everywhere a monetary phenomenon," caused by central banks printing too much money. He advocated for a steady, predictable growth rate in the money supply, rather than the activist, fine-tuning approach of the Keynesians. His ideas became incredibly influential in the 1970s and 1980s, shaping the policies of leaders like Ronald Reagan and Margaret Thatcher and providing the intellectual foundation for the modern focus on central bank independence and inflation targeting.</p>
-                <h3>Daniel Kahneman and Amos Tversky: The Psychologists Who Remade Economics</h3>
-                <p>For centuries, the fundamental building block of economic theory was the assumption of *homo economicus*—a perfectly rational, self-interested person who always makes decisions to flawlessly maximize their own well-being. But is that how real people behave? Psychologists Daniel Kahneman and Amos Tversky conducted a series of brilliant experiments that showed this assumption was fundamentally, and predictably, wrong. They demonstrated that real humans are subject to a host of systematic cognitive biases and often rely on mental shortcuts (heuristics) that lead to irrational choices. For example, they showed we are profoundly loss-averse (we feel the pain of a $100 loss much more than the pleasure of a $100 gain) and that we are easily swayed by how choices are "framed." Their work gave birth to the incredibly influential field of behavioral economics, which combines insights from psychology and economics to create far more realistic models of human decision-making. For this work, Kahneman won the Nobel Prize in Economics in 2002 (Tversky had sadly passed away several years earlier).</p>
-                <h3>Esther Duflo: The Pioneer of a New, Data-Driven Development Economics</h3>
-                <p>For decades, the debate over how to help the world's poorest populations was dominated by grand theories with surprisingly little empirical evidence. On one side were those who argued for massive aid infusions, and on the other were those who argued aid created dependency. Esther Duflo and her colleagues Abhijit Banerjee and Michael Kremer brought a new, scientific rigor to this debate. They championed the use of Randomized Controlled Trials (RCTs)—the same method used in medicine to test the effectiveness of a new drug—to figure out which specific anti-poverty interventions actually work on the ground. Instead of asking a vague question like "Does foreign aid work?", they asked specific, testable questions like, "What is the most cost-effective way to convince parents in rural Kenya to deworm their children?" or "Do free, insecticide-treated bed nets actually reduce malaria rates and improve school attendance?" This evidence-based, micro-level approach has revolutionized development economics, moving it from abstract ideological debates to a practical, data-driven science of finding what works. For this transformative work, they were jointly awarded the Nobel Prize in Economics in 2019.</p>
-            </div>
+    </div>
+    
+    <!-- Article 4 Content -->
+    <div id="article-content-4" class="article-content-view hidden">
+        <button class="back-to-resources-button mb-8 text-bedsa-blue font-semibold hover:underline">&larr; Back to All Resources</button>
+        <div class="article-layout">
+            <aside class="toc-sidebar">
+                <h3 class="text-lg font-bold mb-4">In This Article</h3>
+                <nav>
+                    <ul>
+                        <li><a href="#article-4-sec-1" class="toc-link block py-2 hover:underline">Introduction</a></li>
+                        <li><a href="#article-4-sec-2" class="toc-link block py-2 hover:underline">The Three Main Sectors</a></li>
+                        <li><a href="#article-4-sec-3" class="toc-link block py-2 hover:underline">A Day in the Life</a></li>
+                        <li><a href="#article-4-sec-4" class="toc-link block py-2 hover:underline">The Economist's Toolkit</a></li>
+                        <li><a href="#article-4-sec-5" class="toc-link block py-2 hover:underline">Key Takeaways</a></li>
+                        <li><a href="#article-4-sec-6" class="toc-link block py-2 hover:underline">References</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <article class="article-body">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-bedsa-blue mb-4">What Do Economists Do?</h2>
+                <div class="text-md text-gray-500 mb-8 border-b pb-4">By Feda Mohammadi | August 22, 2025</div>
+                <div class="prose max-w-none text-gray-700 space-y-6 leading-relaxed">
+                    <section id="article-4-sec-1">
+                        <h3>Introduction: A Career in Understanding Choices</h3>
+                        <p>When you tell someone you are studying economics, they might imagine you working at a big bank or on Wall Street. While many economists do work in finance, the field is much broader than that. An economist is like a detective who studies human behavior to understand how the world works. They use theories and data to analyze everything from why a new smartphone costs so much to what policies could help reduce poverty. Their work is found in government, private companies, and universities, and their main goal is always the same. They want to explain how people, businesses, and governments make decisions.</p>
+                    </section>
+                    <section id="article-4-sec-2">
+                        <h3>The Three Main Sectors Where Economists Work</h3>
+                        <p>Most careers in economics can be found in one of three main areas. Each area has a different focus, but they all rely on the same core skills of analysis and critical thinking.</p>
+                        <ul>
+                            <li><strong>Academia (Universities and Colleges):</strong> Many economists with advanced degrees, like a Ph.D., become professors. Their job is split between two main tasks. The first is teaching the next generation of students about the principles of economics. The second, and often larger, part of their job is research. Academic economists try to answer big, new questions about the economy. They might study the effects of immigration on wages, how technology is changing the job market, or the best ways to design environmental policies. They publish their findings in academic journals to share their knowledge with other experts.</li>
+                            <li><strong>Government:</strong> Economists are essential to the government at every level. They work in many different agencies. For example, at the Federal Reserve, economists analyze data on employment and inflation to help decide on interest rate policies that affect the entire country. At the Department of Justice, they might analyze a proposed merger between two large companies to see if it would be bad for consumers. Others work for agencies like the World Bank or the International Monetary Fund, where they study global economic issues and advise developing countries on how to improve their economies.</li>
+                             <li><strong>Private Sector (Businesses):</strong> This is the largest and most diverse area of employment for economists. In the private sector, economists use their skills to help companies make better business decisions. A tech company like Amazon or Netflix might hire an economist to help set prices for its products or to design the auctions for its advertising platform. A large bank might hire economists to forecast where the economy is heading so they can make smarter investment choices. They also work in consulting, where they are hired by different companies to solve specific business problems using economic analysis and data.</li>
+                        </ul>
+                    </section>
+                    <section id="article-4-sec-3">
+                        <h3>A Day in the Life: What the Work Looks Like</h3>
+                        <p>The daily work of an economist can vary a lot depending on their job, but there are some common activities. A large part of the day often involves working with data. This could mean collecting data from government sources, writing code to clean and analyze it, and building statistical models to test a hypothesis. Another big part of the job is communication. Economists need to be able to explain their complex findings in a simple and clear way. This could involve writing reports, creating presentations with charts and graphs, or giving talks to company leaders or policymakers. The goal is to take complicated information and turn it into a clear story that can be used to make a decision.</p>
+                    </section>
+                    <section id="article-4-sec-4">
+                        <h3>The Economist's Toolkit</h3>
+                        <p>To do their work, economists rely on a specific set of tools. They have a strong foundation in economic theory, including both microeconomics and macroeconomics. They also have strong quantitative skills. This includes a deep understanding of statistics and econometrics, which is the use of statistical methods to analyze economic data. In today's world, technical skills are also very important. Most economists are proficient in at least one programming language, like R or Python, which they use for their data analysis. This combination of theoretical knowledge, statistical skill, and technical ability allows them to tackle a wide range of interesting and important problems.</p>
+                    </section>
+                     <section id="article-4-sec-5">
+                        <h3 class="key-takeaways-title">Key Takeaways</h3>
+                        <ul class="key-takeaways-list">
+                            <li><strong>Economists study decision making:</strong> They analyze how people, firms, and governments make choices with limited resources.</li>
+                            <li><strong>They work everywhere:</strong> The main employment sectors are academia (research and teaching), government (policy analysis), and the private sector (business strategy).</li>
+                            <li><strong>The job is data driven:</strong> A typical day involves collecting, analyzing, and interpreting data to answer questions.</li>
+                            <li><strong>Communication is key:</strong> A crucial part of the job is explaining complex findings in a simple way to help others make better decisions.</li>
+                        </ul>
+                    </section>
+                    <section id="article-4-sec-6">
+                        <h3 class="references-title">References</h3>
+                        <ul class="references-list">
+                            <li>American Economic Association. (n.d.). *Careers in Economics*. Retrieved from aeaweb.org</li>
+                            <li>Bureau of Labor Statistics, U.S. Department of Labor. (2023). *Occupational Outlook Handbook, Economists*.</li>
+                        </ul>
+                    </section>
+                </div>
+                 <div class="author-info">
+                    <h4>Author Information</h4>
+                    <p></strong> Feda Mohammadi</strong></p>
+                    <p></strong> mohammadi@berea.edu</strong></p>
+                    <p></strong> Economics and Computer Science</strong></p>
+                    <p></strong>Berea College</strong></p>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <!-- Article 5 Content -->
+    <div id="article-content-5" class="article-content-view hidden">
+        <button class="back-to-resources-button mb-8 text-bedsa-blue font-semibold hover:underline">&larr; Back to All Resources</button>
+        <div class="article-layout">
+            <aside class="toc-sidebar">
+                <h3 class="text-lg font-bold mb-4">In This Article</h3>
+                <nav>
+                    <ul>
+                        <li><a href="#article-5-sec-1" class="toc-link block py-2 hover:underline">Introduction</a></li>
+                        <li><a href="#article-5-sec-2" class="toc-link block py-2 hover:underline">R: The Statistician's Tool</a></li>
+                        <li><a href="#article-5-sec-3" class="toc-link block py-2 hover:underline">Python: The All-Purpose Tool</a></li>
+                        <li><a href="#article-5-sec-4" class="toc-link block py-2 hover:underline">Which Should You Choose?</a></li>
+                        <li><a href="#article-5-sec-5" class="toc-link block py-2 hover:underline">Key Takeaways</a></li>
+                        <li><a href="#article-5-sec-6" class="toc-link block py-2 hover:underline">References</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <article class="article-body">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-bedsa-blue mb-4">Your First Data Science Toolkit: Python vs. R</h2>
+                <div class="text-md text-gray-500 mb-8 border-b pb-4">By Feda Mohammadi | August 19, 2025</div>
+                <div class="prose max-w-none text-gray-700 space-y-6 leading-relaxed">
+                    <section id="article-5-sec-1">
+                        <h3>Introduction: The Great Debate</h3>
+                        <p>When you start learning about data science, you will quickly hear about one of the biggest debates in the field. Which programming language should you learn first? The two most popular languages for data work are Python and R. Both languages are free, powerful, and have large communities of users who create helpful tools. However, they were created for different reasons and have different strengths. Deciding which one to learn first can feel like a big choice. This guide will explain the differences between Python and R to help you decide which one is right for you.</p>
+                    </section>
+                    <section id="article-5-sec-2">
+                        <h3>R: The Statistician's Native Language</h3>
+                        <p>The R language was built by statisticians specifically for doing statistical analysis and making graphs. If you have a background in statistics or social science, the way R works might feel very natural to you. It is designed to follow the workflow of an analyst.</p>
+                        <ul>
+                            <li><strong>Strengths:</strong> R's biggest advantage is its amazing collection of packages for almost any statistical method you can think of. If a new statistical method is invented, it is often available as an R package first. A famous collection of packages called the Tidyverse makes cleaning and working with data very organized and powerful. For making charts and graphs, the R package ggplot2 is considered the best tool available by many experts.</li>
+                            <li><strong>Weaknesses:</strong> R can sometimes feel a little strange if you try to use it for general programming tasks that are not related to data. Its style is different from many other common programming languages, which can make it a little harder to learn other languages later on.</li>
+                            <li><strong>Who is it for?</strong> R is a perfect choice for students who plan to go into academic research or want to become a dedicated statistician.</li>
+                        </ul>
+                    </section>
+                    <section id="article-5-sec-3">
+                        <h3>Python: The Versatile All-Purpose Powerhouse</h3>
+                        <p>Python was created as a general purpose language, with a focus on being easy to read and simple to use. It became popular for data science more recently, after a set of powerful libraries were developed that made it great for data analysis and especially for machine learning.</p>
+                         <ul>
+                            <li><strong>Strengths:</strong> Python's biggest advantage is that it can be used for almost anything. It is like a Swiss Army knife for programming. You can use it for data analysis, but also for building websites, automating tasks, and much more. This makes it a very valuable skill. The language is known for being easy for beginners to learn. The main libraries for data science, like Pandas for working with data tables and Scikit-learn for machine learning, are very strong and widely used in the industry.</li>
+                            <li><strong>Weaknesses:</strong> Although Python's tools for making charts are good, many people feel that R's ggplot2 is more elegant and intuitive for creating complex graphs.</li>
+                            <li><strong>Who is it for?</strong> Python is an excellent choice for students who want a flexible language they can use for many different things, or for those who are very interested in machine learning and artificial intelligence.</li>
+                        </ul>
+                    </section>
+                    <section id="article-5-sec-4">
+                        <h3>The Verdict: Which Should You Choose?</h3>
+                        <p>The honest answer is that you cannot make a bad choice. Both Python and R are excellent languages for data work. Many professional data scientists know how to use both and choose the best tool for each specific project. Learning one language makes it much easier to learn the other one later.</p>
+                        <p>However, if you are a student starting today and need one recommendation, **you should probably start with Python.**</p>
+                        <p>For most people entering the job market now, Python is the more strategic choice. Because it is so versatile, it opens up more job opportunities. Its dominance in the growing field of machine learning makes it a very valuable skill for the future. After you become comfortable doing data analysis in Python, you will find it very easy to learn the basics of R if you ever need to for a specific class or job.</p>
+                    </section>
+                     <section id="article-5-sec-5">
+                        <h3 class="key-takeaways-title">Key Takeaways</h3>
+                        <ul class="key-takeaways-list">
+                            <li><strong>R is for specialized statistical analysis:</strong> It is the best tool for academic research and complex statistics, with the best-in-class tools for data visualization.</li>
+                            <li><strong>Python is the versatile industry standard:</strong> It is a general-purpose language that is excellent for data science, machine learning, and many other tasks, making it a very flexible skill.</li>
+                            <li><strong>Start with Python:</strong> For most students, Python is the recommended first language because it is easier to learn and opens up more career opportunities.</li>
+                            <li><strong>You can't go wrong:</strong> The most important thing is to learn one language well. The skills you learn will easily transfer to the other.</li>
+                        </ul>
+                    </section>
+                    <section id="article-5-sec-6">
+                        <h3 class="references-title">References</h3>
+                        <ul class="references-list">
+                            <li>VanderPlas, J. (2016). *Python Data Science Handbook*. O'Reilly Media.</li>
+                            <li>Wickham, H., & Grolemund, G. (2017). *R for Data Science*. O'Reilly Media.</li>
+                        </ul>
+                    </section>
+                </div>
+                 <div class="author-info">
+                    <h4>Author Information</h4>
+                    <p></strong> Feda Mohammadi</strong></p>
+                    <p></strong> mohammadi@berea.edu</strong></p>
+                    <p></strong> Economics and Computer Science</strong></p>
+                    <p></strong>Berea College</strong></p>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <!-- Article 6 Content -->
+    <div id="article-content-6" class="article-content-view hidden">
+        <button class="back-to-resources-button mb-8 text-bedsa-blue font-semibold hover:underline">&larr; Back to All Resources</button>
+        <div class="article-layout">
+            <aside class="toc-sidebar">
+                <h3 class="text-lg font-bold mb-4">In This Article</h3>
+                <nav>
+                    <ul>
+                        <li><a href="#article-6-sec-1" class="toc-link block py-2 hover:underline">Introduction</a></li>
+                        <li><a href="#article-6-sec-2" class="toc-link block py-2 hover:underline">Technical Skills</a></li>
+                        <li><a href="#article-6-sec-3" class="toc-link block py-2 hover:underline">Analytical Skills</a></li>
+                        <li><a href="#article-6-sec-4" class="toc-link block py-2 hover:underline">Soft Skills</a></li>
+                        <li><a href="#article-6-sec-5" class="toc-link block py-2 hover:underline">Key Takeaways</a></li>
+                        <li><a href="#article-6-sec-6" class="toc-link block py-2 hover:underline">References</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <article class="article-body">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-bedsa-blue mb-4">Top Skills You Need To Become A Data Scientist</h2>
+                <div class="text-md text-gray-500 mb-8 border-b pb-4">By Feda Mohammadi | August 16, 2025</div>
+                <div class="prose max-w-none text-gray-700 space-y-6 leading-relaxed">
+                    <section id="article-6-sec-1">
+                        <h3>Introduction: More Than Just Coding</h3>
+                        <p>Becoming a data scientist is a goal for many students who enjoy math, statistics, and programming. It is a rewarding career where you get to solve interesting puzzles that can have a real impact on a business or the world. But being a successful data scientist requires more than just knowing how to write code. It involves a unique mix of technical knowledge, analytical thinking, and strong communication abilities. The best data scientists are not just good with computers. They are also great thinkers and storytellers. This guide will break down the most important skills you need to develop to build a successful career in data science.</p>
+                    </section>
+                    <section id="article-6-sec-2">
+                        <h3>The Foundation: Technical Skills</h3>
+                        <p>These are the practical, hands on abilities that you need to work with data every day. Without a solid technical foundation, it is impossible to do the job.</p>
+                        <ul>
+                            <li><strong>Programming (Python and R):</strong> As discussed in another article, you need to be proficient in a programming language built for data. Python is the most common choice in the industry because it is versatile and has powerful libraries like Pandas for data manipulation and Scikit-learn for machine learning. R is also very popular, especially in academia and research, for its deep statistical capabilities. You should aim to be very comfortable in at least one of these.</li>
+                            <li><strong>Databases (SQL):</strong> Data is almost always stored in databases. SQL is the universal language used to get information out of these databases. A data scientist who cannot write SQL is like a chef who cannot use a knife. It is an absolutely essential skill for collecting the raw material you need for your analysis.</li>
+                             <li><strong>Mathematics and Statistics:</strong> You do not need to be a math genius, but you must have a strong understanding of core concepts from statistics and linear algebra. You need to understand what a p-value means, how a regression model works, and the basics of probability. This knowledge is what allows you to choose the right analytical method for a problem and to understand the results of your models.</li>
+                        </ul>
+                    </section>
+                    <section id="article-6-sec-3">
+                        <h3>The Core of the Job: Analytical Skills</h3>
+                        <p>These skills are about how you think. They are what allow you to take a messy, real world problem and turn it into a structured data project.</p>
+                        <ul>
+                            <li><strong>Critical Thinking:</strong> This is the ability to look at a problem from many different angles and to question your own assumptions. A good data scientist does not just accept the data as it is. They ask critical questions like: Where did this data come from? Could there be any errors or biases in it? Is this the right data to answer the question I have?</li>
+                            <li><strong>Problem Solving:</strong> Often, you will be given a vague business goal, like "we want to increase customer engagement." A data scientist's job is to translate that vague goal into a specific, answerable question that can be addressed with data. This requires creativity and a structured way of thinking to break a big problem down into smaller, manageable parts.</li>
+                        </ul>
+                    </section>
+                    <section id="article-6-sec-4">
+                        <h3>The Differentiator: Soft Skills</h3>
+                        <p>These are the skills that separate a good data scientist from a great one. They are all about how you work with other people.</p>
+                        <ul>
+                            <li><strong>Communication:</strong> This might be the single most important skill of all. You can build the most brilliant machine learning model in the world, but if you cannot explain how it works and what its results mean to a non-technical audience, it is useless. You must be able to tell a clear and convincing story with your data.</li>
+                            <li><strong>Curiosity:</strong> Data scientists are naturally curious people. They enjoy digging into data to understand why things are the way they are. They are always asking "why?" and looking for the next interesting question to investigate. This curiosity is what drives them to find insights that other people might miss.</li>
+                            <li><strong>Business Acumen:</strong> This means understanding how a business works and what is important to its success. A great data scientist does not just analyze data for fun. They focus on the problems that are most important to the company. Understanding the company's goals helps you to focus your efforts on work that will have the biggest impact.</li>
+                        </ul>
+                    </section>
+                     <section id="article-6-sec-5">
+                        <h3 class="key-takeaways-title">Key Takeaways</h3>
+                        <ul class="key-takeaways-list">
+                            <li><strong>It's a Mix of Skills:</strong> A great data scientist combines technical, analytical, and soft skills.</li>
+                            <li><strong>Master the Technical Trio:</strong> Focus on becoming strong in Programming (Python or R), Databases (SQL), and Statistics.</li>
+                            <li><strong>Think Critically:</strong> The best analysis comes from questioning assumptions and deeply understanding the business problem.</li>
+                            <li><strong>Communication is Your Superpower:</strong> Your value is determined not by what you find, but by how well you can explain it to others to drive action.</li>
+                        </ul>
+                    </section>
+                    <section id="article-6-sec-6">
+                        <h3 class="references-title">References</h3>
+                        <ul class="references-list">
+                            <li>Davenport, T. H., & Patil, D. J. (2012). *Data Scientist: The Sexiest Job of the 21st Century*. Harvard Business Review.</li>
+                            <li>O'Neil, C., & Schutt, R. (2013). *Doing Data Science: Straight Talk from the Frontline*. O'Reilly Media.</li>
+                        </ul>
+                    </section>
+                </div>
+                 <div class="author-info">
+                    <h4>Author Information</h4>
+                    <p></strong> Feda Mohammadi</strong></p>
+                    <p></strong> mohammadi@berea.edu</strong></p>
+                    <p></strong> Economics and Computer Science</strong></p>
+                    <p></strong>Berea College</strong></p>
+                </div>
+            </article>
         </div>
     </div>
 </div>

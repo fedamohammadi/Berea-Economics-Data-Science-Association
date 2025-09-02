@@ -1,103 +1,132 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const mainContentArea = document.querySelector('main');
-    const navLinks = document.querySelectorAll('.nav-link');
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
+    const mainContent = document.querySelector('main');
 
-    // This function sets up event listeners for dynamically loaded content
-    function setupPageEventListeners() {
-        // Find any buttons inside the loaded content that navigate
-        const navButtons = mainContentArea.querySelectorAll('.nav-button');
-        navButtons.forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                const pageId = this.dataset.page;
-                loadPage(pageId);
-            });
-        });
-
-        // Add listeners for the "Read More" buttons on any page
-        const readMoreButtons = document.querySelectorAll('.read-more-button');
-        readMoreButtons.forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                const articleId = this.dataset.articleId;
-                // When "Read More" is clicked, load the resources page and pass the article ID
-                loadPage('resources', articleId);
-            });
-        });
-
-        // Add listeners for the "Back" buttons within the article view
-        const backToResourcesButtons = mainContentArea.querySelectorAll('.back-to-resources-button');
-        backToResourcesButtons.forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                // When "Back" is clicked, reload the main resources page
-                loadPage('resources');
-            });
-        });
-    }
-    
-    // The main function to load content from files
-    async function loadPage(pageId, articleId = null) {
+    // Function to fetch and display a page
+    async function loadPage(page, articleId = null) {
         try {
-            const response = await fetch(`pages/${pageId}.html`);
-            if (!response.ok) throw new Error(`Page not found: ${pageId}.html`);
-            
-            const html = await response.text();
-            mainContentArea.innerHTML = html;
-
-            // Update which nav link is marked as 'active'
-            navLinks.forEach(link => {
-                link.classList.toggle('active', link.dataset.page === pageId);
-            });
-            
-            // If an articleId was passed, switch to the article view
-            if (pageId === 'resources' && articleId) {
-                const resourcesList = mainContentArea.querySelector('#resources-list');
-                const articleView = mainContentArea.querySelector('#article-view');
-                const targetArticle = mainContentArea.querySelector(`#article-content-${articleId}`);
-
-                if (resourcesList && articleView && targetArticle) {
-                    resourcesList.style.display = 'none';
-                    articleView.style.display = 'block';
-                    targetArticle.classList.remove('hidden');
-                }
+            const response = await fetch(`pages/${page}.html`);
+            if (!response.ok) {
+                mainContent.innerHTML = `<p class="text-center text-red-500">Error: Could not load page.</p>`;
+                return;
             }
-
-            // Re-run event listener setup for the new content
-            setupPageEventListeners();
-
-            // Icons need to be re-rendered after new content is loaded
-            feather.replace();
+            mainContent.innerHTML = await response.text();
             
-            window.scrollTo(0, 0); // Scroll to top of the new page
+            // Re-initialize event listeners for the newly loaded content
+            initializePageEventListeners(page, articleId);
 
         } catch (error) {
-            mainContentArea.innerHTML = `<p class="text-center text-red-500">Error: Could not load page content.</p>`;
-            console.error('Failed to load page:', error);
+            console.error('Error loading page:', error);
+            mainContent.innerHTML = `<p class="text-center text-red-500">An error occurred. Please try again.</p>`;
         }
     }
 
-    // Add click listeners to all main navigation elements
-    document.querySelectorAll('.nav-link').forEach(link => {
+    // Function to set up event listeners on a newly loaded page
+    function initializePageEventListeners(page, articleId) {
+        feather.replace(); // Always run feather icons replacement
+
+        // Add listeners for buttons loaded within the main content
+        mainContent.querySelectorAll('.nav-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const pageId = this.dataset.page;
+                setActivePage(pageId);
+            });
+        });
+        
+        mainContent.querySelectorAll('.read-more-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const articleId = this.dataset.articleId;
+                setActivePage('resources', articleId);
+            });
+        });
+
+
+        if (page === 'resources') {
+            const backToResourcesButtons = mainContent.querySelectorAll('.back-to-resources-button');
+            const resourcesList = mainContent.querySelector('#resources-list');
+            const articleView = mainContent.querySelector('#article-view');
+
+            backToResourcesButtons.forEach(button => {
+                 button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    setActivePage('resources');
+                });
+            });
+
+            // If an articleId is passed, show the correct article view
+            if (articleId) {
+                if (resourcesList) resourcesList.style.display = 'none';
+                if (articleView) articleView.style.display = 'block';
+
+                mainContent.querySelectorAll('.article-content-view').forEach(view => {
+                    view.classList.add('hidden');
+                });
+                const targetArticle = mainContent.querySelector(`#article-content-${articleId}`);
+                if(targetArticle) {
+                    targetArticle.classList.remove('hidden');
+                    setupTocSmoothScroll(targetArticle);
+                }
+            }
+        }
+    }
+    
+    // Function to set up smooth scrolling for the Table of Contents
+    function setupTocSmoothScroll(articleContainer) {
+        const tocLinks = articleContainer.querySelectorAll('.toc-link');
+        tocLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = articleContainer.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    }
+
+    // Function to set the active page and handle history
+    function setActivePage(page, articleId = null) {
+        // Update navigation links in the header
+        document.querySelectorAll('header .nav-link').forEach(link => {
+            link.classList.toggle('active', link.dataset.page === page);
+        });
+        
+        // Load the page content
+        loadPage(page, articleId);
+        
+        // Close mobile menu if open
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenu) mobileMenu.classList.add('hidden');
+        
+        window.scrollTo(0, 0);
+    }
+
+    // --- INITIAL SETUP ---
+
+    // Set default page on initial load
+    setActivePage('home');
+
+    // Add click listeners to all STATIC navigation triggers (header and mobile menu)
+    document.querySelectorAll('header .nav-link').forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const pageId = this.dataset.page;
-            mobileMenu.classList.add('hidden');
-            loadPage(pageId);
+            setActivePage(pageId);
         });
     });
-    
-    // Add click listeners to buttons on the page that also navigate
-    setupPageEventListeners();
 
     // Mobile menu toggle
-    mobileMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
-
-    // Load the initial home page on first visit
-    loadPage('home');
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    if (mobileMenuButton) {
+        mobileMenuButton.addEventListener('click', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu) mobileMenu.classList.toggle('hidden');
+        });
+    }
 });
 
